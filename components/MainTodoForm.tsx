@@ -41,7 +41,7 @@ function MainForm({}: Props): JSX.Element {
 
     return (
         <form onSubmit={handleSubmit} autoComplete="off" style={{width: '100%'}}>
-            <div style={{width: '95%', margin: '0 auto'}}>
+            <div style={{width: '90%', margin: '0 auto'}}>
                 <TextField 
                     type="text" 
                     label="Enter a todo" 
@@ -50,7 +50,7 @@ function MainForm({}: Props): JSX.Element {
                     value={todoValue} 
                     onChange={handleTodoValueChange}
                     inputProps={{ maxLength: 70 }}
-                    sx={{width: '85%', wordWrap: "break-word"}} 
+                    sx={{width: '75%', wordWrap: "break-word"}} 
                 />
                 <Button 
                     type="submit" 

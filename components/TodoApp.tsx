@@ -52,8 +52,9 @@ const TodoApp = (props: Props): JSX.Element => {
                 direction="row"
                 alignItems="flex-start"
                 justifyContent="center"
+                
             >
-                <Grid container item xs={12} lg={6} sx={{ marginTop: "3rem" }}>
+                <Grid container item xs={12} lg={6} sx={{ marginTop: "3rem"}}>
                     <Grid item xs={12} sx={{height: '40px'}}>
                         <MainTodoForm />
                     </Grid>  

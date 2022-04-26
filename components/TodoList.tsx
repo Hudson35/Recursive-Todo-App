@@ -77,7 +77,7 @@ function TodoList({ todoArrayItem }: IItem): JSX.Element {
     }
 
     return (
-        <div style={{ marginLeft: "20px" }}>          
+        <div style={{ marginLeft: "40px" }}>          
             <div style={{ display: "flex", alignItems: "center", height: "40px", marginTop: '10px' }}>
                 <div>
                     <div style={{float: 'left', display: 'inline-block', alignItems: 'center'}}>
@@ -111,7 +111,7 @@ function TodoList({ todoArrayItem }: IItem): JSX.Element {
                             )
                             :
                             (
-                                <div style={{display: 'inline-block', marginLeft: '10px'}}>
+                                <div style={{display: 'inline-block', marginLeft: '5px'}}>
                                     <Tooltip title="Toggle Completed" placement="left">
                                         <Typography 
                                             variant="h6" 
