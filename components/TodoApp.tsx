@@ -15,33 +15,33 @@ const TodoApp = (props: Props): JSX.Element => {
     const [todosArray, setTodosArray] = TodoContextState();
 
     // This useEffect gets data from localForage upon page load/refresh
-    useEffect(() => {
-        (async () => {
-            try {
-                // Grab the values from localForage and set them in their local states
-                const todosArrayLF: ITodo[] | null | undefined = await localForage.getItem('todosArray');
-                setTodosArray(todosArrayLF);
-            }
-            catch(error) {
-                console.log('Error occurred when getting localForage data', error);
-            }
-        })
-        (); // Calling the above anonymous arrow function
-    }, []);
+    // useEffect(() => {
+    //     (async () => {
+    //         try {
+    //             // Grab the values from localForage and set them in their local states
+    //             const todosArrayLF: ITodo[] | null | undefined = await localForage.getItem('todosArray');
+    //             setTodosArray(todosArrayLF);
+    //         }
+    //         catch(error) {
+    //             console.log('Error occurred when getting localForage data', error);
+    //         }
+    //     })
+    //     (); // Calling the above anonymous arrow function
+    // }, []);
 
     // This useEffect sets data in localForage based on it's dependencies
-    useEffect(() => {
-        (async () => {
-            try {
-                const todosArrayLF = await localForage.setItem('todosArray', todosArray);
-            }         
-            catch(error) {
-                console.log('Error occurred when setting localForage data', error);
-            }
-        })
-        (); // Calling the above anonymous arrow function
+    // useEffect(() => {
+    //     (async () => {
+    //         try {
+    //             const todosArrayLF = await localForage.setItem('todosArray', todosArray);
+    //         }         
+    //         catch(error) {
+    //             console.log('Error occurred when setting localForage data', error);
+    //         }
+    //     })
+    //     (); // Calling the above anonymous arrow function
 
-    }, [todosArray, setTodosArray]);
+    // }, [todosArray, setTodosArray]);
 
     return (
         <>

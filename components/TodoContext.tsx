@@ -19,13 +19,7 @@ const TodoContext = createContext<ITodoContext>([[], () => null]);
 function ListContext({children}: Props): JSX.Element {
     
     // As explained in the comment above at the top, the todosArray is not initialised, therefore it can be undefined
-    const [todosArray, setTodosArray] = useState<ITodo[] | undefined | null>([
-        {
-            id: Date.now(),
-            todoTask: "first todo", 
-            childrenTodos: [],
-        }
-    ]);
+    const [todosArray, setTodosArray] = useState<ITodo[] | undefined | null>([]);
     
     return (
         <TodoContext.Provider value={[todosArray, setTodosArray]}>
