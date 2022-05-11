@@ -61,6 +61,8 @@ const TodoApp = (props: Props): JSX.Element => {
                     <Grid item xs={12} sx={{minHeight: '100vh'}}>
                         { 
                             todosArray?.length !== 0 && todosArray?.map((todoArrayItem: ITodo) => {
+                                console.log("Top level todoArrayItem.id: ", todoArrayItem.id);
+                                console.log('Todo task:', todoArrayItem.todoTask)
                                 return <TodoList key={todoArrayItem.id} todoArrayItem={todoArrayItem} /> 
                             })
                         }

@@ -190,7 +190,7 @@ function TodoList({ todoArrayItem }: IItem): JSX.Element {
             }
             {
                 // This code below works good, doesn't have deep level data persistence, but has the top level
-                todoArrayItem.childrenTodos.length !== 0 && todoArrayItem.childrenTodos.map((element: ITodo) => { return <TodoList key={element.id} todoArrayItem={element}/>; })
+                todoArrayItem.childrenTodos.length !== 0 && todoArrayItem.childrenTodos.map((element: ITodo) => { console.log('ChildrenTodo element.id: ', element.id); return <TodoList key={element.id} todoArrayItem={element}/>; })
                 
                 // This code below doesn't work, was trying to implement deep level persistence 
                 // subTodos[index]?.childrenTodos?.length !== 0 && subTodos[index]?.childrenTodos?.map((element: ITodo, index: number) => { return <TodoList key={element.id} todoArrayItem={element} index={index}/>; })
